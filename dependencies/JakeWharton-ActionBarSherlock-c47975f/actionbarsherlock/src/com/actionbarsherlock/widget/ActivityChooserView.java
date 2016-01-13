@@ -370,7 +370,8 @@ class ActivityChooserView extends ViewGroup implements ActivityChooserModelClien
      *
      * @return True if dismissed, false if already dismissed.
      */
-    public boolean dismissPopup() {
+    @SuppressWarnings("deprecation")
+	public boolean dismissPopup() {
         if (isShowingPopup()) {
             getListPopupWindow().dismiss();
             ViewTreeObserver viewTreeObserver = getViewTreeObserver();
